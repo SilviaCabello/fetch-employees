@@ -1,5 +1,4 @@
-import logo from "./logo.svg";
-import "./App.css";
+import React from "react";
 import DisplayEmployee from "./components/DisplayEmployee";
 
 const sampleEmployee = {
@@ -23,9 +22,11 @@ const sampleEmployee = {
 };
 
 function App() {
+  const [employee, setEmployee] = useState(sampleEmployee);
+
   return (
     <div className="App">
-      <DisplayEmployee employee={sampleEmployee} />
+      <DisplayEmployee employee={employee} />
     </div>
   );
 }
